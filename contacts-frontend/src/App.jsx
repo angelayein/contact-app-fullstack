@@ -15,7 +15,7 @@ const App = () => {
     // })
     contactService.getAllContacts().then((contact) => setContacts(contact)).catch(e=>{
       console.log("Server is down");
-      setContacts(null);
+      setContacts([]);
     })
   }, []);
 

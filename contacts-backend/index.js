@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+require("dotenv").config();
 
 app.use(cors());
 app.use(express.json());
@@ -13,7 +14,7 @@ const reqLogger = (req, res, next) => {
 };
 app.use(reqLogger);
 
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 let contacts = [
     { id: 1, name: "John Doe", email: "john@example.com"},
