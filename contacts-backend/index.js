@@ -5,6 +5,7 @@ require("dotenv").config();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static("dist"));
 
 const reqLogger = (req, res, next) => {
   console.log(`Request Method: ${req.method}`)
